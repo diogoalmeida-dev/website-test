@@ -1,11 +1,20 @@
-import '.styles/Landing.css';
+/*
+    Landing.tsx
+    The landing page for the AILA project
+    Return type is React.FC
+    Welcomes the user, provides a brief introduction, and a call-to-action button   
+*/
 
-export default function Landing() {
+import '../styles/Landing.css';
+
+const Landing: React.FC = () => {
   return (
     <div className="landing-container">
-      <h1>AILA - Assistente Legal de Inteligência Artificial</h1>
-      <p>This is the landing page of the AILA project.</p>
+      <h1>Assistente Legal Inteligente</h1>
+      <p>Insira a sua queixa e receba uma versão reformulada com os decretos-lei aplicáveis.</p>
       <button className="start-button">Começar agora</button>
     </div>
   );
-}
+};
+
+export default Landing;
