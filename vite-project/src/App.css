@@ -1,0 +1,10 @@
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* header stays at top */
+  align-items: stretch;        /* children take full width */
+  background-color: var(--background-color);
+  transition: background-color 0.25s ease-in-out;
+}
