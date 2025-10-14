@@ -4,11 +4,13 @@
 */
 
 import type { JSX } from "react"; 
+import '../styles/components/Header.css';
 
 export default function Header(): JSX.Element {
   return (
     <header>
-      <h1>Welcome to AILA</h1>
+      <h2 className="logo">AILA</h2>
+      <button className="theme-toggle">🌙</button>
     </header>
   );
 }

@@ -5,7 +5,7 @@
     Welcomes the user, provides a brief introduction, and a call-to-action button   
 */
 
-import '../styles/Landing.css';
+import '../styles/pages/Landing.css';
 
 const Landing: React.FC = () => {
   return (
