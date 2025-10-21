@@ -13,22 +13,43 @@ body, html {
 }
 
 :root {
-  --background-color: #fbfbfe;
-  --foreground-color: #d6d1ce;
-  --primary-text-color: #040316;
-  --secondary-text-color: #443333;
-  --toggle-bg: #b2c0c7;
-  --toggle-fg: #040316;
+  /* Base (Light theme) */
+  --background-color: #FFFFFF;
+  --foreground-color: #F6F7F9;
+  --primary-text-color: #0B0C11;
+  --secondary-text-color: #48704B;
+  
+  /* Accent colors */
+  --accent-color: #41C3FF; /* Deep Sky Blue */
+  --accent-dark: #105A7E;  /* Deep Ocean Blue */
+  --success-color: #48704B; /* Fern Green */
+  
+  /* UI elements */
+  --toggle-bg: #E0E0E0;
+  --toggle-fg: #0B0C11;
+  --border-color: #DADADA;
+  --card-bg: #FFFFFF;
 }
 
 [data-theme="dark"] {
-  --background-color: #242424;
-  --foreground-color: #060422;
-  --primary-text-color: #eae9fc;
-  --secondary-text-color: #0600c2;
-  --toggle-bg: #99ddd786;
-  --toggle-fg: #dfdfd4;
+  /* Base (Dark theme) */
+  --background-color: #0B0C11;
+  --foreground-color: #0B0C11;
+  --primary-text-color: #FFFFFF;
+  --secondary-text-color: #41C3FF;
+  
+  /* Accent colors */
+  --accent-color: #105A7E;  /* Deep Ocean Blue */
+  --accent-dark: #41C3FF;  /* Swap accent for brightness */
+  --success-color: #48704B; /* Fern Green */
+
+  /* UI elements */
+  --toggle-bg: #105A7E;
+  --toggle-fg: #FFFFFF;
+  --border-color: #1E1E1E;
+  --card-bg: #0B0C11;
 }
+
 
 
 /* Scrollbar styling 

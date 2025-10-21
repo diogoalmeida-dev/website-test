@@ -7,6 +7,9 @@ import type { JSX } from "react";
 import '../styles/components/Header.css';
 import Toggle from './Toggle.tsx';
 
+import ailaLogo from '../assets/AILA-LOGO-BLUE.png'
+
+
 export default function Header({
   isDark,
   handleChange,
@@ -16,7 +19,7 @@ export default function Header({
 }): JSX.Element {
   return (
     <header className="header">
-      <h2 className="logo">AILA</h2>
+      <img src={ailaLogo} alt="AILA logo" className="logo" />
       <Toggle isChecked={isDark} handleChange={handleChange} />
     </header>
   );

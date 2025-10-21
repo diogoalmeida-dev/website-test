@@ -10,9 +10,9 @@ import '../styles/pages/Landing.css';
 const Landing: React.FC = () => {
   return (
     <div className="landing-container">
-      <h1>Assistente Legal Inteligente</h1>
+      <h1>Assistente Legal <span className="highlight">Inteligente</span></h1>
       <p>Insira a sua queixa e receba uma versão reformulada com os decretos-lei aplicáveis.</p>
-      <button className="start-button">Começar agora</button>
+      <button className="start-button">Começar</button>
     </div>
   );
 };

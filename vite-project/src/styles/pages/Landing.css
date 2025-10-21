@@ -1,0 +1,101 @@
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px); /* fits under the header */
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  padding: 2rem;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.landing-container h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-text-color);
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #105A7E;
+  position: relative;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 96%;
+  height: 4px;
+  background: linear-gradient(90deg, #41C3FF, #105A7E);
+  border-radius: 2px;
+  opacity: 0.8;
+
+}
+
+
+.landing-container h1::first-line {
+  color: #41C3FF; /* highlight first line with AILA blue */
+}
+
+.landing-container p {
+  font-size: 1.5rem;
+  max-width: 700px;
+  margin-bottom: 2.5rem;
+  color: var(--primary-text-color);
+}
+
+/* --- Button --- */
+.start-button {
+  display: inline-block;
+  background: linear-gradient(90deg, #41C3FF 0%, #105A7E 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 2.5rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(65, 195, 255, 0.35);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+  will-change: transform, box-shadow, filter;
+  position: relative;
+  z-index: 2;
+  opacity: 0;                 /* start hidden */
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Hover — grow */
+.start-button:hover {
+  transform: scale(1.09);
+  filter: brightness(1.1);
+}
+
+/* Active — press down*/
+.start-button:active {
+  transform: translateY(2px) scale(0.96);
+  box-shadow: 0 6px 10px rgba(65, 195, 255, 0.3);
+  filter: brightness(0.95);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.landing-container h1,
+.landing-container p,
+.start-button {
+  animation: fadeInUp 0.8s ease forwards;
+}
