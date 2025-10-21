@@ -2,11 +2,10 @@ import './App.css'
 import Header from './components/Header.tsx'
 import Sidebar from './components/Sidebar.tsx'
 import Landing from './pages/Landing.tsx'
-
-import React, { useState } from 'react'
+import useLocalStorage from 'use-local-storage'
 
 function App() {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useLocalStorage('isDark', false);
 
   return (
     <>
