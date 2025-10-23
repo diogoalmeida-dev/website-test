@@ -20,7 +20,7 @@
 }
 
 .highlight {
-  color: #105A7E;
+  color: var(--accent-dark);
   position: relative;
 }
 
@@ -31,15 +31,13 @@
   left: 0;
   width: 96%;
   height: 4px;
-  background: linear-gradient(90deg, #41C3FF, #105A7E);
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-dark));
   border-radius: 2px;
   opacity: 0.8;
-
 }
 
-
 .landing-container h1::first-line {
-  color: #41C3FF; /* highlight first line with AILA blue */
+  color: var(--accent-color); /* highlight first line with AILA blue */
 }
 
 .landing-container p {
@@ -52,7 +50,7 @@
 /* --- Button --- */
 .start-button {
   display: inline-block;
-  background: linear-gradient(90deg, #41C3FF 0%, #105A7E 100%);
+  background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-dark) 100%);
   color: #fff;
   border: none;
   border-radius: 12px;

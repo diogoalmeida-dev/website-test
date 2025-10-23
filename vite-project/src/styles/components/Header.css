@@ -15,8 +15,8 @@ header {
   height: 30px;
   width: auto;
   object-fit: contain;
+  cursor: pointer;
 }
-
 
 .theme-toggle {
   cursor: pointer;

@@ -1,0 +1,107 @@
+.stepper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  user-select: none;
+}
+
+.stepper {
+  margin-bottom: 75px; /* space below the stepper */
+}
+
+
+/* Each step stacks: circle on top, label below */
+.stepper-item {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto;   /* circle row, then label row */
+  justify-items: center;
+  row-gap: 6px;
+  padding-bottom: 6px;
+}
+
+/* Ball (Deep Ocean Blue) */
+.stepper-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--accent-dark);            /* Light theme: #105A7E */
+  border: 2px solid var(--accent-dark);
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  color: #FFFFFF;                            /* number color inside the ball */
+}
+
+/* Keep Deep Ocean Blue in dark theme too */
+[data-theme="dark"] .stepper-circle {
+  background: var(--accent-color);           /* Dark theme swaps: var(--accent-color) = #105A7E */
+  border-color: var(--accent-color);
+}
+
+.stepper-index {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+/* Label below the ball */
+.stepper-label {
+  font-size: 0.rem;
+  color: var(--primary-text-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 95%;
+  text-align: center;
+}
+
+/* Connector line from the CENTER of this ball to the next */
+.stepper-line {
+  position: absolute;
+  top: 17px;                       /* vertical center of a 34px circle */
+  left: 50%;
+  right: -50%;
+  height: 2px;
+  background: var(--border-color);
+  transform: translateY(-50%);
+}
+
+/* ===== States ===== */
+
+/* Completed step: Fern Green */
+.stepper-item.completed .stepper-circle {
+  background: var(--success-color);          /* #48704B */
+  border-color: var(--success-color);
+  color: #FFFFFF;
+}
+
+/* Make the connector to the NEXT step green as well for completed items */
+.stepper-item.completed .stepper-line {
+  background: var(--success-color);
+}
+
+/* Active (current) step: keep Deep Ocean Blue, add subtle glow */
+.stepper-item.active .stepper-circle {
+  box-shadow:
+    0 0 0 4px rgba(16, 90, 126, 0.18);      /* glow based on Deep Ocean Blue */
+}
+
+/* Emphasize the active label */
+.stepper-item.active .stepper-label {
+  color: var(--secondary-text-color);        /* good contrast accent label */
+  font-weight: 700;
+}
+
+/* Mobile: labels still fit under nicely */
+@media (max-width: 720px) {
+  .stepper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .stepper-label {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+}

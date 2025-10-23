@@ -6,13 +6,18 @@
 */
 
 import '../styles/pages/Landing.css';
+import { useNavigate } from 'react-router-dom';
 
 const Landing: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="landing-container">
       <h1>Assistente Legal <span className="highlight">Inteligente</span></h1>
       <p>Insira a sua queixa e receba uma versão reformulada com os decretos-lei aplicáveis.</p>
-      <button className="start-button">Começar</button>
+    <button className="start-button" onClick={() => navigate('/form')}>
+      Começar
+    </button>
     </div>
   );
 };

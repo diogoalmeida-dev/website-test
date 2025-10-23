@@ -1,0 +1,144 @@
+/* Usa apenas os tokens globais que já forneceste:
+   --background-color, --foreground-color, --primary-text-color, --secondary-text-color,
+   --accent-color, --accent-dark, --success-color, --border-color, --card-bg
+   + aqui definimos só utilitários neutros (não de cor) */
+:root {
+  --radius: 16px;
+  --shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.complaint-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+  color: var(--primary-text-color);
+}
+
+.step-body {
+  margin-top: 18px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  color: var(--primary-text-color);
+}
+
+.card-title {
+  margin: 0 0 24px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-text-color);
+}
+
+.list {
+  margin: 10px 0 0 18px;
+  line-height: 1.6;
+}
+
+.muted {
+  color: var(--secondary-text-color);
+}
+
+.hint {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--secondary-text-color);
+}
+
+.nav-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.spacer { flex: 1; }
+
+.btn {
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--primary-text-color);
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.04s ease, background-color 0.2s ease, border-color 0.2s ease, filter 0.2s ease;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #105A7E 0%, #0E4E68 100%);
+  border: 1px solid #0E4E68;
+  color: #FFFFFF;
+}
+
+.btn.primary:hover {
+  filter: brightness(1.07);
+}
+
+
+.btn.secondary:hover {
+  /* leve realce que funciona em claro/escuro */
+  background: var(--foreground-color);
+}
+
+/* Área de texto do resumo (DraftAnswerStep) */
+.draft-area {
+  width: 100%;
+  margin-top: 10px;
+  background: var(--foreground-color);
+  color: var(--primary-text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 12px;
+  line-height: 1.45;
+  resize: vertical;
+  min-height: 180px;
+}
+
+/* Foco consistente com o acento */
+.draft-area:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(65, 195, 255, 0.18);
+}
+
+/* Preview de resposta final */
+.final-answer {
+  white-space: pre-wrap;
+  border: 1px dashed var(--border-color);
+  border-radius: 12px;
+  padding: 14px;
+  background: var(--foreground-color);
+  color: var(--primary-text-color);
+  margin-top: 8px;
+}
+
+.final-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+
+.draft-area.readonly {
+  background: var(--foreground-color);
+  color: var(--primary-text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 12px;
+  line-height: 1.45;
+  min-height: 180px;
+  white-space: pre-wrap;
+  font-family: inherit;
+}

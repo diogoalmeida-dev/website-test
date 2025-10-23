@@ -17,7 +17,7 @@ body, html {
   --background-color: #FFFFFF;
   --foreground-color: #F6F7F9;
   --primary-text-color: #0B0C11;
-  --secondary-text-color: #48704B;
+  --secondary-text-color: #949c94;
   
   /* Accent colors */
   --accent-color: #41C3FF; /* Deep Sky Blue */
@@ -36,7 +36,7 @@ body, html {
   --background-color: #0B0C11;
   --foreground-color: #0B0C11;
   --primary-text-color: #FFFFFF;
-  --secondary-text-color: #41C3FF;
+  --secondary-text-color: #105A7E;
   
   /* Accent colors */
   --accent-color: #105A7E;  /* Deep Ocean Blue */
